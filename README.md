@@ -1,5 +1,22 @@
 # clock
-A tiny minimalistic web-page which shows the time! 
 
-[ Click here for server-time! ](https://htmlpreview.github.io/?https://github.com/vbloom-x3/clock/blob/50561e193f9d2627899a7d3c05cf758369029f90/src/server/index.html)
-[ or, Click here for system-time! ](https://htmlpreview.github.io/?https://github.com/vbloom-x3/clock/blob/3d0df2acf5d3d94801a960d0c99e0702b8cd0026/src/system/index.html)
+A minimal web page that displays the current time.
+
+## Overview
+
+This project provides two versions of a simple clock:
+- **Server time** — shows the time from the server.
+- **System time** — shows the time from the user’s device.
+
+It’s a lightweight example of using HTML, CSS, and JavaScript for a real-time display.
+
+## Live Preview
+
+- [Server Time](https://htmlpreview.github.io/?https://github.com/vbloom-x3/clock/blob/main/server-time.html)
+- [System Time](https://htmlpreview.github.io/?https://github.com/vbloom-x3/clock/blob/main/system-time.html)
+
+## Getting Started
+
+### Clone the repository
+```bash
+git clone https://github.com/vbloom-x3/clock.git
