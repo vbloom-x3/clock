@@ -9,12 +9,14 @@ function displayTime(currentDate) {
   const m = String(currentDate.getMinutes()).padStart(2, "0");
   const s = String(currentDate.getSeconds()).padStart(2, "0");
 
-  const formatted = `{
-date : ${day}/${month}/${year}
-time : ${h}:${m}:${s}
-}`;
+  const formatted = `
+<pre>{
+    date : ${day}/${month}/${year}
+    time : ${h}:${m}:${s}
+}</pre>`;
 
-  document.getElementById("preBlock").textContent = formatted;
+  // Use innerHTML to inject the <pre> tag with its content
+  document.getElementById("preBlock").innerHTML = formatted;
   document.title = `${h}:${m}`;
 }
 
@@ -27,8 +29,6 @@ function fetchTimeOnce() {
 
   // Update every second
   setInterval(() => {
-    // Instead of incrementing a stored date, create a new Date object each second
-    // to get the most accurate time from the system.
     displayTime(new Date());
   }, 1000);
 }
