@@ -20,3 +20,6 @@ It’s a lightweight example of using HTML, CSS, and JavaScript for a real-time 
 ### Clone the repository
 ```bash
 git clone https://github.com/vbloom-x3/clock.git
+```
+
+ﾟ.・。.・゜✭・ might or might not work .・✫・゜・。.
