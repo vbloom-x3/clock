@@ -1,3 +1,4 @@
+// This is the original code, but modified to read from the system clock
 let serverDate;
 
 function displayTime(currentDate) {
@@ -9,25 +10,19 @@ function displayTime(currentDate) {
   const m = String(currentDate.getMinutes()).padStart(2, "0");
   const s = String(currentDate.getSeconds()).padStart(2, "0");
 
-  const formatted = `
-<pre>{
+  // Keep the formatted string exactly as you intended
+  const formatted = `{
     date : ${day}/${month}/${year}
     time : ${h}:${m}:${s}
-}</pre>`;
+}`;
 
-  // Use innerHTML to inject the <pre> tag with its content
-  document.getElementById("preBlock").innerHTML = formatted;
+  document.getElementById("preBlock").textContent = formatted;
   document.title = `${h}:${m}`;
 }
 
 function fetchTimeOnce() {
-  // Use the local system's date and time
   const localDate = new Date();
-
-  // First display
   displayTime(localDate);
-
-  // Update every second
   setInterval(() => {
     displayTime(new Date());
   }, 1000);
