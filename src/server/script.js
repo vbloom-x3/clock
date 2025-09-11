@@ -24,7 +24,7 @@ let serverDate;
         const response = await fetch("https://timeapi.io/api/Time/current/zone?timeZone=Asia/Kolkata");
         const data = await response.json();
         const end = performance.now();
-        const accuracy = Math.round(end - start);
+        const ping = Math.round(end - start);
 
         const year = data.year;
         const month = data.month;
@@ -35,7 +35,7 @@ let serverDate;
 
         serverDate = new Date(year, month - 1, day, hour, minute, seconds);
 
-        document.getElementById("accuracy").textContent = `accuracy: ${accuracy} ms`;
+        document.getElementById("ping").textContent = `ping: ${ping} ms`;
 
         // First display
         displayTime(serverDate);
@@ -47,7 +47,7 @@ let serverDate;
         }, 1000);
       } catch (error) {
         document.getElementById("preBlock").textContent = "{\n    date : error\n    time : error\n}";
-        document.getElementById("accuracy").textContent = `accuracy: --- ms`;
+        document.getElementById("accuracy").textContent = `ping: --- ms`;
         console.error("error: 0xFA", error);
       }
     }
