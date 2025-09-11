@@ -15,7 +15,7 @@ function displayTime(currentDate) {
 }`;
 
   document.getElementById("preBlock").textContent = formatted;
-  document.title = `${h}:${m}`;
+  document.title = `${h}:${m}:${s}`;
 }
 
 function fetchTimeOnce() {
