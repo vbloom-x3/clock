@@ -1,4 +1,3 @@
-// This is the original code, but modified to read from the system clock
 let serverDate;
 
 function displayTime(currentDate) {
@@ -10,7 +9,6 @@ function displayTime(currentDate) {
   const m = String(currentDate.getMinutes()).padStart(2, "0");
   const s = String(currentDate.getSeconds()).padStart(2, "0");
 
-  // Keep the formatted string exactly as you intended
   const formatted = `{
     date : ${day}/${month}/${year}
     time : ${h}:${m}:${s}
