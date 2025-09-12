@@ -1,4 +1,3 @@
-let serverDate;
 function displayTime(currentDate) {
   const day = String(currentDate.getDate()).padStart(2, "0");
   const month = String(currentDate.getMonth() + 1).padStart(2, "0");
@@ -25,7 +24,7 @@ function displayTime(currentDate) {
   }
 
 }
-document.getElementById("preBlock").addEventListener("click", (event) => {
+document.getElementById("textBlock").addEventListener("click", (event) => {
   event.preventDefault();
   showDate = !showDate;
   displayTime(new Date());
