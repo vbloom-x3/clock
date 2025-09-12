@@ -1,4 +1,3 @@
-let formatted;
 let serverDate;
 let dateToggle = true;
 function displayTime(currentDate) {
@@ -11,18 +10,21 @@ function displayTime(currentDate) {
   const s = String(currentDate.getSeconds()).padStart(2, "0");
 
   if (dateToggle) {
-    formatted = `{
+    let formatted = `{
     date : ${day}/${month}/${year}
     time : ${h}:${m}:${s}
 }`;
+    document.getElementById("preBlock").textContent = formatted;
+    document.title = `${h}:${m}:${s}`;
   }
   else {
-    formatted= `{
+    let formatted= `{
     time : ${h}:${m}:${s}
 }`
+    document.getElementById("preBlock").textContent = formatted;
+    document.title = `${h}:${m}:${s}`;
   }
-  document.getElementById("preBlock").textContent = formatted;
-  document.title = `${h}:${m}:${s}`;
+
 }
 document.getElementById("toggleLink").addEventListener("click", (event) => {
   event.preventDefault();
