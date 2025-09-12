@@ -24,7 +24,7 @@ function displayTime(currentDate) {
   }
 
 }
-document.getElementById("textBlock").addEventListener("click", (event) => {
+document.getElementById("preBlock").addEventListener("click", (event) => {
   event.preventDefault();
   showDate = !showDate;
   displayTime(new Date());
