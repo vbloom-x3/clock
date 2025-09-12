@@ -1,3 +1,4 @@
+let formatted;
 let serverDate;
 let dateToggle = true;
 function displayTime(currentDate) {
@@ -26,7 +27,7 @@ function displayTime(currentDate) {
 document.getElementById("toggleLink").addEventListener("click", (event) => {
   event.preventDefault();
   showDate = !showDate;
-  displayTime();
+  displayTime(new Date());
 });
 function fetchTimeOnce() {
   const localDate = new Date();
