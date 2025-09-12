@@ -1,5 +1,4 @@
 let serverDate;
-let dateToggle = true;
 function displayTime(currentDate) {
   const day = String(currentDate.getDate()).padStart(2, "0");
   const month = String(currentDate.getMonth() + 1).padStart(2, "0");
@@ -8,7 +7,7 @@ function displayTime(currentDate) {
   const h = String(currentDate.getHours()).padStart(2, "0");
   const m = String(currentDate.getMinutes()).padStart(2, "0");
   const s = String(currentDate.getSeconds()).padStart(2, "0");
-
+  let dateToggle = true;
   if (dateToggle) {
     let formatted = `{
     date : ${day}/${month}/${year}
@@ -26,7 +25,7 @@ function displayTime(currentDate) {
   }
 
 }
-document.getElementById("toggleLink").addEventListener("click", (event) => {
+document.getElementById("preBlock").addEventListener("click", (event) => {
   event.preventDefault();
   showDate = !showDate;
   displayTime(new Date());
