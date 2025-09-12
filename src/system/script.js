@@ -25,7 +25,7 @@ function displayTime(currentDate) {
 
 }
 function fetchTimeOnce() {
-  document.getElementById("preBlock").addEventListener("click", (event) => {
+  document.getElementById("textBlock").addEventListener("click", (event) => {
   event.preventDefault();
   dateToggle = !dateToggle;
   displayTime(new Date());
