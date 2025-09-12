@@ -26,7 +26,7 @@ function displayTime(currentDate) {
 }
 document.getElementById("preBlock").addEventListener("click", (event) => {
   event.preventDefault();
-  showDate = !showDate;
+  dateToggle = !dateToggle;
   displayTime(new Date());
 });
 function fetchTimeOnce() {
