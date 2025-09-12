@@ -11,13 +11,13 @@ function displayTime(currentDate) {
   const s = String(currentDate.getSeconds()).padStart(2, "0");
 
   if (dateToggle) {
-    const formatted = `{
+    formatted = `{
     date : ${day}/${month}/${year}
     time : ${h}:${m}:${s}
 }`;
   }
   else {
-    const formatted= `{
+    formatted= `{
     time : ${h}:${m}:${s}
 }`
   }
