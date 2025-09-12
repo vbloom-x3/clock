@@ -23,3 +23,11 @@
       text-align: left;
       white-space: pre;
     }
+    #accuracy {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      font-size: 1.5vw;
+      color: #e6ccff;
+      text-align: right;
+    }
