@@ -24,12 +24,12 @@ function displayTime(currentDate) {
   }
 
 }
-document.getElementById("preBlock").addEventListener("click", (event) => {
+function fetchTimeOnce() {
+  document.getElementById("preBlock").addEventListener("click", (event) => {
   event.preventDefault();
   dateToggle = !dateToggle;
   displayTime(new Date());
 });
-function fetchTimeOnce() {
   const localDate = new Date();
   displayTime(localDate);
   setInterval(() => {
