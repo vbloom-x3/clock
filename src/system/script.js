@@ -6,7 +6,7 @@ function displayTime(currentDate) {
   const h = String(currentDate.getHours()).padStart(2, "0");
   const m = String(currentDate.getMinutes()).padStart(2, "0");
   const s = String(currentDate.getSeconds()).padStart(2, "0");
-  let dateToggle = false;
+  let dateToggle = true;
   if (dateToggle) {
     let formatted = `{
     date : ${day}/${month}/${year}
